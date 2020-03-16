@@ -8,23 +8,14 @@
 <body>
    <!-- 1 função para exibir 3 estados baseado em passar parâmetros -->
     <h2>Acenda a lâmpada</h2>
-    <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)" alt="lâmpada apagada"/>
+    <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')" alt="lâmpada apagada"/>
 
 <script>
     var quebrada = false;
     function mudaLampada(tipo) {
-        if (tipo == 1) {
-            arquivo = "_imagens/lampada-acesa.jpg";
-        }
-        if (tipo == 2) {
-            arquivo = "_imagens/lampada-apagada.jpg";
-        }
-        if (tipo == 3) {
-            arquivo = "_imagens/lampada-quebrada.jpg";
-        }
         if (!quebrada){
-            document.getElementById("lampadaApagada").src = arquivo;
-            if (tipo == 3) {
+            document.getElementById("lampadaApagada").src = "_imagens/" + tipo + ".jpg";
+            if (tipo == 'lampada-quebrada') {
                 quebrada = true;
             }
         }

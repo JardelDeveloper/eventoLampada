@@ -6,7 +6,15 @@
     <title>Evento lâmpada</title>
 </head>
 <body>
+
     <h2>Acenda a lâmpada</h2>
-    <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" alt="lâmpada apagada"/>
+    <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="acendeLampada()" alt="lâmpada apagada"/>
+
+<script>
+    function acendeLampada() {
+        document.getElementById("lampadaApagada").src = "_imagens/lampada-acesa.jpg"
+    }
+</script>
+    
 </body>
 </html>

@@ -8,11 +8,14 @@
 <body>
 
     <h2>Acenda a lâmpada</h2>
-    <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="acendeLampada()" onclick="quebraLampada()" alt="lâmpada apagada"/>
+    <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()" alt="lâmpada apagada"/>
 
 <script>
     function acendeLampada() {
         document.getElementById("lampadaApagada").src = "_imagens/lampada-acesa.jpg"
+    }
+    function apagaLampada() {
+        document.getElementById("lampadaApagada").src = "_imagens/lampada-apagada.jpg"
     }
     function quebraLampada() {
         document.getElementById("lampadaApagada").src = "_imagens/lampada-quebrada.jpg"

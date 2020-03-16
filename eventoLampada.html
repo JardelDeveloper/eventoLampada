@@ -11,7 +11,7 @@
     <img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()" alt="lâmpada apagada"/>
 
 <script>
-    /* 3 Funções criadas para exibir 3 estados da lâmpada*/
+    /* 3 Funções criadas para exibir 3 estados da lâmpada */
 
     function acendeLampada() {
         document.getElementById("lampadaApagada").src = "_imagens/lampada-acesa.jpg";
@@ -23,6 +23,24 @@
         document.getElementById("lampadaApagada").src = "_imagens/lampada-quebrada.jpg";
     }
 </script>
+<!-- 1 função para exibir 3 estados baseado em passar parâmetros
     
+<img src="_imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)" alt="lâmpada apagada"/>
+
+<script>
+    function mudaLampada(tipo) {
+        if (tipo == 1) {
+            arquivo = "_imagens/lampada-acesa.jpg";
+        }
+        if (tipo == 2) {
+            arquivo = "_imagens/lampada-apagada.jpg";
+        }
+        if (tipo == 3) {
+            arquivo = "_imagens/lampada-quebrada.jpg";
+        }
+        document.getElementById("lampadaApagada").src = arquivo;
+    }
+</script>
+-->    
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-   <!-- 1 função para exibir 3 estados baseado em passar parâmetros -->
+   <!-- 1 função para exibir 3 estados baseado em passar parâmetros 
     <h2>Acenda a lâmpada</h2>
     <img src="imagens/lampada-apagada.jpg" id="lampadaApagada" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')" alt="lâmpada apagada"/>
 
@@ -20,6 +20,18 @@
             }
         }
     }
+</script>
+-->
+
+<h1>Testando botão de compartilhamento de url</h1>
+
+<a href="https://jardeldeveloper.github.io/eventoLampada/" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button"></a>
+<!--Constrói a URL depois que o DOM estiver pronto-->
+<script>
+document.addEventListener("DOMContentLoaded", function() {            
+    //altera a URL do botão
+    document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+}, false);
 </script>
 
 <!-- 
